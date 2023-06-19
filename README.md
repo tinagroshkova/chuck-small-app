@@ -1,1 +1,1 @@
-# chuck-small-app
+# chuck-app
