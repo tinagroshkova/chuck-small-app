@@ -66,10 +66,10 @@ p {
 .red {
   color: #E4324C;
 }
-
 .star-icon {
-  font-size: 48px;
+  font-size: 42px;
   padding: 20px;
   align-self: flex-end;
+  filter: drop-shadow(1px 1px 1px black);
 }
 </style>

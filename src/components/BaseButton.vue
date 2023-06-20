@@ -7,17 +7,19 @@
 <style scoped>
 
 button {
-  padding: 0.75rem 1.5rem;
+  //padding: 0.75rem 1.5rem;
   font-family: inherit;
   background-color: #E4324C;
   border: 1px solid #E4324C;
   color: white;
   cursor: pointer;
-  box-shadow: 0 8px 6px -6px black;
   border-radius: 20px;
-  font-size: 18px;
+  font-size: 20px;
+  text-shadow: 2px 2px #424e52;
   font-weight: 700;
   margin: 20px 0;
+  letter-spacing: 0.2em;
+  box-shadow: 10px 10px 6px -6px black;
 }
 
 button:hover,

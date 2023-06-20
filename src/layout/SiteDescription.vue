@@ -36,8 +36,9 @@ div {
 h1 {
   display: flex;
   font-weight: 700;
-  font-size: 38px;
+  font-size: 40px;
   width: 340px;
+  text-shadow: 2px 2px black;
+  letter-spacing: 0.1em;
 }
-
 </style>

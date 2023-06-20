@@ -8,6 +8,7 @@
       <base-button @click="fetchRandomJoke">Get another one</base-button>
     </div>
     <base-card v-if="currentJoke" class="joke-holder">
+      <p>{{ currentJoke.category }}</p>
       <p :key="currentJoke.id">{{ currentJoke.text }}</p>
       <i :class="['fas', 'fa-star', 'star-icon', {'added': currentJoke.isInFavorites, 'toAdd': !currentJoke.isInFavorites}]"
          @click="toggleFavorites(currentJoke)"></i>
@@ -51,6 +52,7 @@ export default {
           ? `${SITE_URL}/random?category=${this.selectedCategory}`
           : `${SITE_URL}/random`;
       const jsonData = await fetchData(url);
+      console.log(jsonData);
       this.currentJoke.id = jsonData.id;
       this.currentJoke.text = jsonData.value;
       this.currentJoke.isInFavorites = false;
@@ -89,6 +91,7 @@ select {
   padding: 0 20px;
   height: 52px;
   border-radius: 20px;
+  box-shadow: 10px 10px 6px -6px black;
 }
 .joke-holder {
   display: flex;
@@ -101,7 +104,6 @@ p {
 .added {
   color: #E4324C;
 }
-
 .toAdd {
   color: grey;
 }
@@ -111,6 +113,7 @@ p {
   width: 100px;
   align-self: flex-end;
   padding: 20px;
+  filter: drop-shadow(1px 1px 1px black);
 }
 </style>
 <!--<template>-->

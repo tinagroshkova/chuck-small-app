@@ -17,22 +17,22 @@
 ul {
   align-items: center;
 }
-a {
+
+.nav-link {
+  margin: 0 10px;
+  border-radius: 20px;
   font-size: 22px;
   font-weight: 700;
   letter-spacing: 0.1em;
-}
-.nav-link {
-  margin: 0 10px;
 }
 
 img {
   width: 50px;
   height: auto;
 }
-.router-link-active.router-link-exact-active.nav-item.nav-link {
+.router-link-active.router-link-exact-active {
   background-color: #E4324C;
-  border-radius: 20px;
   color: white;
+  text-shadow: 2px 2px #424e52;
 }
 </style>

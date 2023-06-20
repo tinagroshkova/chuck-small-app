@@ -9,7 +9,7 @@ div {
   width: 600px;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 10px 6px -6px black;
+  box-shadow: 10px 10px 6px -6px black;
   background-color: #E1E1E1;
   transition: all 1s;
 }
