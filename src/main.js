@@ -6,6 +6,7 @@ import JokesPages from '@/pages/JokesPages.vue';
 import FavoritesPage from '@/pages/FavoritesPage.vue';
 import HomePage from '@/pages/HomePage.vue';
 import { createStore } from 'vuex';
+import '@fortawesome/fontawesome-free/css/all.css';
 
 const app = createApp(App);
 

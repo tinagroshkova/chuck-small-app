@@ -5,7 +5,7 @@
         <a class='navbar-brand' href='#'>
           <img src='../../public/images/logo.png'>
         </a>
-        <router-link to='/' class='nav-item nav-link'>Home</router-link>
+        <router-link to='/' class='nav-item nav-link' >Home</router-link>
         <router-link to='/jokes' class='nav-item nav-link'>Jokes</router-link>
         <router-link to='favorites' class='nav-item nav-link'>Favorites</router-link>
       </ul>
@@ -17,12 +17,22 @@
 ul {
   align-items: center;
 }
-li {
-  font-size: 20px;
+a {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
 }
+.nav-link {
+  margin: 0 10px;
+}
+
 img {
   width: 70px;
   height: auto;
 }
-
+.router-link-active.router-link-exact-active.nav-item.nav-link {
+  background-color: #E4324C;
+  border-radius: 20px;
+  color: white;
+}
 </style>

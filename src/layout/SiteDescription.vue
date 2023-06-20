@@ -1,38 +1,44 @@
 <template>
   <div>
-    <h1> {{ title.toLocaleUpperCase() }}</h1>
+    <h1> {{ description }}</h1>
     <base-button @click='navigateToJokes'>Get Jokes</base-button>
   </div>
 </template>
+
 <script>
 import BaseButton from '@/components/BaseButton.vue';
 
+
 export default {
   components: {
-    BaseButton
+    BaseButton,
   },
   props: {
-    title: {
+    description: {
       type: String,
-      required: true
+      required: true,
     },
     navigateTo: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     navigateToJokes() {
       this.$router.push({ path: this.navigateTo });
-    }
-  }
+    },
+  },
 };
 </script>
+
 <style scoped>
+div {
+  margin: 0 20px;
+}
 h1 {
-  width: 400px;
-  font-weight: 800;
+  display: flex;
+  font-weight: 700;
+  font-size: 32px;
 }
 
 </style>
-
