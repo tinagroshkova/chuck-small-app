@@ -1,13 +1,13 @@
 <template>
   <div class='container'>
+    <hero-section
+        :imageSrc="'/images/chuck.jpg'"
+        altText="Chuck Norris"
+    ></hero-section>
     <site-description
         :description='description'
         navigate-to='/jokes'
     ></site-description>
-    <hero-section
-        :imageSrc="'https://caknowledge.com/wp-content/uploads/2022/05/Chuck-Norris-Net-Worth-100-million.jpg'"
-        altText="Chuck Norris"
-    ></hero-section>
   </div>
 </template>
 
@@ -45,3 +45,6 @@ export default {
   color: white;
 }
 </style>
+
+
+

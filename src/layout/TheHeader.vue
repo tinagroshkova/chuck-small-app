@@ -3,7 +3,7 @@
     <div class='container-fluid'>
       <ul class='navbar-nav'>
         <a class='navbar-brand' href='#'>
-          <img src='../../public/images/logo.png'>
+          <img src='../../public/images/logo1.png'>
         </a>
         <router-link to='/' class='nav-item nav-link' >Home</router-link>
         <router-link to='/jokes' class='nav-item nav-link'>Jokes</router-link>
@@ -27,7 +27,7 @@ a {
 }
 
 img {
-  width: 70px;
+  width: 50px;
   height: auto;
 }
 .router-link-active.router-link-exact-active.nav-item.nav-link {

@@ -7,8 +7,6 @@
 
 <script>
 import BaseButton from '@/components/BaseButton.vue';
-
-
 export default {
   components: {
     BaseButton,
@@ -33,12 +31,13 @@ export default {
 
 <style scoped>
 div {
-  margin: 0 20px;
+  margin: 0 40px;
 }
 h1 {
   display: flex;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 38px;
+  width: 340px;
 }
 
 </style>
