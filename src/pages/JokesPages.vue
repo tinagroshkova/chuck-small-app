@@ -33,6 +33,7 @@ export default {
       currentJoke: {
         id: '',
         text: '',
+        category: '',
         isInFavorites: false
       }
     };
@@ -55,6 +56,7 @@ export default {
       this.currentJoke.id = jsonData.id;
       this.currentJoke.text = jsonData.value;
       this.currentJoke.isInFavorites = false;
+      this.currentJoke.category = this.selectedCategory;
     },
 
     toggleFavorites(joke) {

@@ -1,11 +1,11 @@
 <template>
-  <div class='container'>
+  <div class="container">
     <slot></slot>
   </div>
 </template>
 
 <style scoped>
-div {
+.container {
   width: 600px;
   height: auto;
   border-radius: 20px;
@@ -14,8 +14,9 @@ div {
   transition: all 1s;
 }
 
-div:hover {
-  transform: scale(1.1);
+.container:hover {
+  transform: scale(1.2);
   background-color: white;
 }
+
 </style>
