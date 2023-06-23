@@ -54,7 +54,7 @@ export default {
           (favorite) => favorite.id === joke.id
       );
       if (isJokeInFavorites) {
-        this.$store.commit("removeJoke", joke.id);
+        this.$store.dispatch("removeJoke", joke.id);
       }
       this.favorites = this.favorites.filter(
           (favorite) => favorite.id !== joke.id
@@ -98,7 +98,7 @@ p {
 }
 
 h5 {
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 </style>
