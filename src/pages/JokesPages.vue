@@ -52,7 +52,6 @@ export default {
           ? `${SITE_URL}/random?category=${this.selectedCategory}`
           : `${SITE_URL}/random`;
       const jsonData = await fetchData(url);
-      console.log(jsonData);
       this.currentJoke.id = jsonData.id;
       this.currentJoke.text = jsonData.value;
       this.currentJoke.isInFavorites = this.isJokeInFavorites(jsonData.id);
@@ -68,7 +67,6 @@ export default {
         this.$store.dispatch('addJoke', jokeToAdd);
       }
       this.currentJoke.isInFavorites = !isJokeInFavorites;
-      console.log(this.$store.state.userFavorites);
     },
 
     isJokeInFavorites(jokeId) {
