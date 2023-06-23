@@ -25,16 +25,16 @@ const store = createStore({
       userFavorites: JSON.parse(localStorage.getItem('userFavorites')) || []
     };
   },
-  mutations: {
-    addJoke(state, joke) {
-      state.userFavorites.push(joke);
-      localStorage.setItem('userFavorites', JSON.stringify(state.userFavorites));
+  actions: {
+    addJoke(context, joke) {
+      context.state.userFavorites.push(joke);
+      localStorage.setItem('userFavorites', JSON.stringify(context.state.userFavorites));
     },
-    removeJoke(state, jokeId) {
-      const index = state.userFavorites.findIndex(joke => joke.id === jokeId);
+    removeJoke(context, jokeId) {
+      const index = context.state.userFavorites.findIndex(joke => joke.id === jokeId);
       if (index !== -1) {
-        state.userFavorites.splice(index, 1);
-        localStorage.setItem('userFavorites', JSON.stringify(state.userFavorites));
+        context.state.userFavorites.splice(index, 1);
+        localStorage.setItem('userFavorites', JSON.stringify(context.state.userFavorites));
       }
     }
   }
