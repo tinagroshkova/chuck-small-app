@@ -55,20 +55,24 @@ export default {
       console.log(jsonData);
       this.currentJoke.id = jsonData.id;
       this.currentJoke.text = jsonData.value;
-      this.currentJoke.isInFavorites = false;
+      this.currentJoke.isInFavorites = this.isJokeInFavorites(jsonData.id);
       this.currentJoke.category = this.selectedCategory;
     },
 
     toggleFavorites(joke) {
-      const isJokeInFavorites = this.$store.state.userFavorites.find(favorite => favorite.id === joke.id);
+      const isJokeInFavorites = this.isJokeInFavorites(joke.id);
       if (isJokeInFavorites) {
-        this.$store.commit('removeJoke', joke.id);
+        this.$store.dispatch('removeJoke', joke.id);
       } else {
         const jokeToAdd = {...joke, isInFavorites: true};
-        this.$store.commit('addJoke', jokeToAdd);
+        this.$store.dispatch('addJoke', jokeToAdd);
       }
       this.currentJoke.isInFavorites = !isJokeInFavorites;
       console.log(this.$store.state.userFavorites);
+    },
+
+    isJokeInFavorites(jokeId) {
+      return this.$store.state.userFavorites.some(favorite => favorite.id === jokeId);
     }
   }
 };
